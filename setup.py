@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
   name='buildorchestra',
-  version='0.1',
+  version='0.1.0',
   description='Build system orchestration tool',
   url='http://github.com/Gohla/buildorchestra',
   author='Gabriel Konat',
