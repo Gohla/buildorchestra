@@ -9,7 +9,7 @@ setup(
   author_email='g.d.p.konat@tudelft.nl',
   license='Apache 2.0',
   packages=['buildorchestra'],
-  requires=['toposort'],
+  install_requires=['toposort'],
   test_suite='nose.collector',
   tests_require=['nose']
 )
