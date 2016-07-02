@@ -7,7 +7,7 @@ class BuildResult:
     self.artifacts = artifacts
 
   def copy_to(self, destDir):
-    os.makedirs(destDir)
+    os.makedirs(destDir, exist_ok=True)
     for artifact in self.artifacts:
       artifact.copy_to(destDir)
 
@@ -17,7 +17,7 @@ class StepResult:
     self.artifacts = artifacts
 
   def copy_to(self, destDir):
-    os.makedirs(destDir)
+    os.makedirs(destDir, exist_ok=True)
     for artifact in self.artifacts:
       artifact.copy_to(destDir)
 
