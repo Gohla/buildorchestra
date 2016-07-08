@@ -33,5 +33,7 @@ class Artifact:
 
   def copy_to(self, destDir):
     copyLocation = os.path.join(destDir, self.target)
+    copyDir = os.path.dirname(copyLocation)
+    os.makedirs(copyDir, exist_ok=True)
     print('Copying artifact {} to {}'.format(self, copyLocation))
     shutil.copyfile(self.location, copyLocation)
