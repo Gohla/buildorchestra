@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-class BuildResult:
+class BuildResult(object):
   def __init__(self, artifacts):
     self.artifacts = artifacts
 
@@ -12,7 +12,7 @@ class BuildResult:
       artifact.copy_to(destDir)
 
 
-class StepResult:
+class StepResult(object):
   def __init__(self, artifacts):
     self.artifacts = artifacts
 
@@ -22,7 +22,7 @@ class StepResult:
       artifact.copy_to(destDir)
 
 
-class Artifact:
+class Artifact(object):
   def __init__(self, name, location, target):
     self.name = name
     self.location = location
