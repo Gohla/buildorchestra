@@ -59,6 +59,5 @@ class DirArtifact(Artifact):
     if not self.dstDir:
       return
     copyDir = os.path.join(destDir, self.dstDir)
-    os.makedirs(copyDir, exist_ok=True)
     print('Copying directory artifact {} to {}'.format(self, copyDir))
     return shutil.copytree(self.srcDir, copyDir)
